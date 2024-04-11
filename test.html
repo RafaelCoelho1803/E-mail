@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting"> 
+    <title></title> 
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Reset de CSS : INÍCIO -->
+    <style>
+
+        /* O que faz: Remover espaços em torno do design de e-mail adicionado por alguns clientes de e-mail. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            background: #f1f1f1;
+        }
+
+        /* O que faz: Impede que os clientes de e-mail redimensionem texto pequeno. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* O que faz: Centraliza o e-mail no Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* O que faz: Impede o Outlook de adicionar espaçamento extra às tabelas. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* O que faz: Corrige o problema de preenchimento do webkit. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+
+        /* O que faz: Usa um método de renderização melhor ao redimensionar imagens no IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* O que faz: Impede o Windows 10 Mail de sublinhar links apesar do CSS inline. Estilos para links sublinhados devem ser inline. */
+        a {
+            text-decoration: none;
+        }
+
+        /* O que faz: Um trabalho em torno para clientes de e-mail intrometidos. */
+        *[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* O que faz: Impede o Gmail de exibir um botão de download em imagens grandes e não vinculadas. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+
+        /* O que faz: Impede o Gmail de mudar a cor do texto em threads de conversa. */
+        .im {
+            color: inherit !important;
+        }
+
+        
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u ~ div .email-container {
+                min-width: 320px !important;
+            }
+        }
+        /* iPhone 6, 6S, 7, 8, e X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u ~ div .email-container {
+                min-width: 375px !important;
+            }
+        }
+        /* iPhone 6+, 7+, e 8+ */
+        @media only screen and (min-device-width: 414px) {
+            u ~ div .email-container {
+                min-width: 414px !important;
+            }
+        }
+
+    </style>
+
+    <style>
+
+        .primary {
+            background: #ea168e;
+        }
+        .bg_white {
+            background: #ffffff;
+        }
+        .bg_light {
+            background: #fafafa;
+        }
+        .bg_black {
+            background: #000000;
+        }
+        .bg_dark {
+            background: rgba(0,0,0,.8);
+        }
+        .email-section {
+            padding:2.5em;
+        }
+
+        /* BOTÃO */
+        .btn {
+            padding: 5px 15px;
+            display: inline-block;
+        }
+        .btn.btn-primary {
+            border-radius: 5px;
+            background: #ea168e;
+            color: #ffffff;
+        }
+        .btn.btn-white {
+            border-radius: 5px;
+            background: #ffffff;
+            color: #000000;
+        }
+        .btn.btn-white-outline {
+            border-radius: 5px;
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-family: 'Poppins', sans-serif;
+            color: #000000;
+            margin-top: 0;
+            font-weight: 400;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(0,0,0,.4);
+        }
+
+        a {
+            color: #ea168e;
+        }
+
+        table {
+        }
+        /* LOGO */
+
+        .logo h1 {
+            margin: 0;
+            line-height: 1;
+        }
+        .logo h1 a {
+            color: #000000;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+            padding-top: 0;
+        }
+
+        /* HERÓI */
+        .hero {
+            position: relative;
+            z-index: 0;
+        }
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            width: 100%;
+            background: #000000;
+            z-index: -1;
+            opacity: .7;
+            background: rgba(255,0,0,1);
+            background: -moz-linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 100%);
+            background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,0,0,1)), color-stop(0%, rgba(255,0,0,1)), color-stop(100%, rgba(255,0,0,1)));
+            background: -webkit-linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 100%);
+            background: -o-linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 100%);
+            background: -ms-linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 100%);
+            background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#ff0000', GradientType=1 );
+            
+        }
+
+        .hero .text {
+            color: rgba(255,255,255,.9);
+        }
+        .hero .text h2 {
+            color: #fff;
+            font-size: 30px;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+        .hero .text h2 span {
+            font-weight: 600;
+            color: #ea168e;
+        }
+
+
+
+
+        
+        .project-entry {
+            position: relative;
+        }
+        .text-project {
+            padding-top: 10px;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+        }
+        .text-project h3 {
+            margin-bottom: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .text-project h3 a {
+            color: #fff;
+        }
+        .text-project span {
+            font-size: 13px;
+            color: rgba(255,255,255,.8);
+        }
+
+        
+
+        .footer {
+            color: rgba(0,0,0,.8);
+        }
+       
+
+        @media screen and (max-width: 500px) {
+
+        }
+
+    </style>
+
+
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
+    <center style="width: 100%; background-color: #f1f1f1;">
+    <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+       
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+        <tr>
+            <td valign="middle" class="bg_white" style="padding: 1em 2.5em;">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td valign="middle" class="logo" style="text-align: center;">
+                            <h1><a href="#">V4 COMPANY</a></h1>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="middle" class="hero bg_white" style="background-image: url(./v4.png); background-size: cover; height: 400px;">
+                <div class="overlay"></div>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="text" style="padding: 0 4em; text-align: center;">
+                                <h2>Nossa comunidade</h2>
+                                <p>Os parceiros da V4 Company são cuidadosamente selecionados, refletindo um compromisso com a excelência e a inovação. Juntos, trabalhamos para criar sinergias poderosas que impulsionam o crescimento mútuo e oferecem soluções integradas aos clientes..</p>
+                                <p><a href="https://v4company.com/v4-cases" class="btn btn-primary">Veja nosso parceiros</a></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="bg_white">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                        <td class="bg_white email-section">
+                            <div class="heading-section" style="text-align: center; padding: 0 30px;">
+                                <h2>Beneficios</h2>
+                                <p>A V4 Company é líder em marketing digital, proporcionando soluções criativas e eficazes para impulsionar o crescimento das empresas. Com uma abordagem centrada no cliente, eles oferecem estratégias personalizadas que geram resultados mensuráveis</p>
+                            </div>
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td valign="top" width="50%">
+                                        <table role="presentation" cellspacing="0" cellpadding="4" border="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <div class="project-entry">
+                                                        <img src="./tec.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        <div class="text-project" style="text-align: center;">
+                                                            <h3><a href="# "style="color: #000000;" >Tecnologia de Ponta</a></h3>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="project-entry">
+                                                        <img src="./aumento.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        <div class="text-project" style="text-align: center;">
+                                                            <h3><a href="#" style="color: #000000;">Aumento de vendas</a></h3>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>                                             
+                                        </table>
+                                    </td>
+                                    <td valign="top" width="50%">
+                                        <table role="presentation" cellspacing="0" cellpadding="4" border="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <div class="project-entry">
+                                                        <img src="./visibilidade.jpg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        <div class="text-project" style="text-align: center;">
+                                                            <h3><a href="#" style="color: #000000;">Aumento de visibilidade</a></h3>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="project-entry">
+                                                        <img src="./market.webp" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
+                                                        <div class="text-project" style="text-align: center;">
+                                                            <h3><a href="#" style="color: #000000";>Estratégia de Marketing</a></h3>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+
+        
+        <tr>
+            <td valign="middle"  style="padding: 2em 0;background-color: #ff3535;">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            <div class="text" style="text-align: center; padding: 0 2.5em;">
+                                <h3 class="heading">Vamos entrar em contato?</h3>
+                                <p><a href="#" class="btn btn-primary">Clique aqui</a></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+      </table>
+
+    </div>
+  </center>
+</body>
+</html>
